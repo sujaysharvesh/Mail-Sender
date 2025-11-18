@@ -62,20 +62,20 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-4">
+    <div className="flex min-h-screen items-center justify-center bg-white p-4">
       <div className="w-full max-w-2xl">
         {/* Header Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-3 tracking-tight">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl md:text-6xl font-light text-black mb-3 tracking-tight">
             Request a Referral
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-base text-gray-600 font-light">
             Fill in the details below to send a referral request
           </p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10 backdrop-blur-sm">
+        <div className="bg-white border border-black p-8 md:p-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Company Name Field */}
             <div className="relative group">
@@ -87,16 +87,15 @@ export default function Home() {
                 onChange={handleInputChanges}
                 disabled={isSubmitting}
                 required
-                className="w-full px-4 py-4 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl outline-none transition-all duration-200
-                  focus:border-indigo-500 focus:bg-white focus:shadow-md
-                  peer disabled:opacity-50 disabled:cursor-not-allowed
-                  group-hover:border-gray-300"
+                className="w-full px-4 py-3 text-black bg-white border border-gray-300 outline-none transition-all duration-200
+                  focus:border-black
+                  peer disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <label
                 htmlFor="companyName"
-                className="absolute left-4 top-4 text-gray-500 transition-all duration-200 pointer-events-none
-                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-indigo-600 peer-focus:bg-white peer-focus:px-2 peer-focus:font-semibold
-                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-indigo-600 peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:font-semibold"
+                className="absolute left-4 top-3 text-gray-500 transition-all duration-200 pointer-events-none text-sm font-light
+                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-black peer-focus:bg-white peer-focus:px-2
+                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-black peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2"
               >
                 Company Name
               </label>
@@ -112,26 +111,25 @@ export default function Home() {
                 onChange={handleInputChanges}
                 disabled={isSubmitting}
                 required
-                className="w-full px-4 py-4 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl outline-none transition-all duration-200
-                  focus:border-indigo-500 focus:bg-white focus:shadow-md
-                  peer disabled:opacity-50 disabled:cursor-not-allowed
-                  group-hover:border-gray-300"
+                className="w-full px-4 py-3 text-black bg-white border border-gray-300 outline-none transition-all duration-200
+                  focus:border-black
+                  peer disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <label
                 htmlFor="position"
-                className="absolute left-4 top-4 text-gray-500 transition-all duration-200 pointer-events-none
-                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-indigo-600 peer-focus:bg-white peer-focus:px-2 peer-focus:font-semibold
-                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-indigo-600 peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:font-semibold"
+                className="absolute left-4 top-3 text-gray-500 transition-all duration-200 pointer-events-none text-sm font-light
+                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-black peer-focus:bg-white peer-focus:px-2
+                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-black peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2"
               >
                 Position / Role
               </label>
             </div>
 
             {/* Divider */}
-            <div className="flex items-center gap-4 py-2">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-              <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Recipient Details</span>
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+            <div className="flex items-center gap-4 py-4">
+              <div className="flex-1 h-px bg-black"></div>
+              <span className="text-xs font-light text-gray-500 uppercase tracking-widest">Recipient Details</span>
+              <div className="flex-1 h-px bg-black"></div>
             </div>
 
             {/* To Name Field */}
@@ -144,16 +142,15 @@ export default function Home() {
                 onChange={handleInputChanges}
                 disabled={isSubmitting}
                 required
-                className="w-full px-4 py-4 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl outline-none transition-all duration-200
-                  focus:border-indigo-500 focus:bg-white focus:shadow-md
-                  peer disabled:opacity-50 disabled:cursor-not-allowed
-                  group-hover:border-gray-300"
+                className="w-full px-4 py-3 text-black bg-white border border-gray-300 outline-none transition-all duration-200
+                  focus:border-black
+                  peer disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <label
                 htmlFor="toName"
-                className="absolute left-4 top-4 text-gray-500 transition-all duration-200 pointer-events-none
-                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-indigo-600 peer-focus:bg-white peer-focus:px-2 peer-focus:font-semibold
-                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-indigo-600 peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:font-semibold"
+                className="absolute left-4 top-3 text-gray-500 transition-all duration-200 pointer-events-none text-sm font-light
+                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-black peer-focus:bg-white peer-focus:px-2
+                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-black peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2"
               >
                 Recipient Name
               </label>
@@ -169,16 +166,15 @@ export default function Home() {
                 onChange={handleInputChanges}
                 disabled={isSubmitting}
                 required
-                className="w-full px-4 py-4 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl outline-none transition-all duration-200
-                  focus:border-indigo-500 focus:bg-white focus:shadow-md
-                  peer disabled:opacity-50 disabled:cursor-not-allowed
-                  group-hover:border-gray-300"
+                className="w-full px-4 py-3 text-black bg-white border border-gray-300 outline-none transition-all duration-200
+                  focus:border-black
+                  peer disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <label
                 htmlFor="toMail"
-                className="absolute left-4 top-4 text-gray-500 transition-all duration-200 pointer-events-none
-                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-indigo-600 peer-focus:bg-white peer-focus:px-2 peer-focus:font-semibold
-                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-indigo-600 peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:font-semibold"
+                className="absolute left-4 top-3 text-gray-500 transition-all duration-200 pointer-events-none text-sm font-light
+                  peer-focus:top-[-10px] peer-focus:left-3 peer-focus:text-xs peer-focus:text-black peer-focus:bg-white peer-focus:px-2
+                  peer-[:not(:placeholder-shown)]:top-[-10px] peer-[:not(:placeholder-shown)]:left-3 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-black peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-2"
               >
                 Recipient Email
               </label>
@@ -188,16 +184,14 @@ export default function Home() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-4 px-8 text-lg font-bold rounded-xl transition-all duration-300 
-                transform hover:scale-[1.02] active:scale-95 
-                disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
-                shadow-lg hover:shadow-xl
+              className={`w-full py-4 px-8 text-sm font-light uppercase tracking-widest transition-all duration-200 
+                border disabled:opacity-50 disabled:cursor-not-allowed
                 ${
                   submitStatus === "success"
-                    ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white"
+                    ? "bg-black text-white border-black"
                     : submitStatus === "error"
-                    ? "bg-gradient-to-r from-red-500 to-rose-600 text-white"
-                    : "bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700"
+                    ? "bg-white text-black border-black"
+                    : "bg-black text-white border-black hover:bg-white hover:text-black"
                 }`}
             >
               {text}
@@ -205,22 +199,23 @@ export default function Home() {
 
             {/* Status Message */}
             {submitStatus && (
-              <div className={`text-center text-sm font-medium ${
-                submitStatus === "success" ? "text-green-600" : "text-red-600"
+              <div className={`text-center text-sm font-light ${
+                submitStatus === "success" ? "text-black" : "text-black"
               }`}>
                 {submitStatus === "success" 
-                  ? "✓ Your referral request has been sent successfully!" 
-                  : "✗ Something went wrong. Please try again."}
+                  ? "Your referral request has been sent successfully" 
+                  : "Something went wrong. Please try again"}
               </div>
             )}
           </form>
         </div>
 
         {/* Footer Note */}
-        <p className="text-center text-sm text-gray-500 mt-6">
+        <p className="text-center text-sm text-gray-500 mt-8 font-light">
           Your request will be sent directly to the recipient's inbox
         </p>
       </div>
     </div>
   );
+  
 }
